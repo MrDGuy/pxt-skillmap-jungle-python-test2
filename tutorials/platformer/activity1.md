@@ -8,12 +8,22 @@
         "tilemapTile": true
     },
     "tile1": {
-        "data": "hwQQABAAAADMzMzMzMzMzLy7u7u7u7vLvMzMzMzMzMu8zMy7u8zMy7zMzMu8zMzLvMzMy7vMzMu8zMzMzMzMy7zMzMy7zMzLvMzMzMvMzMu8zMzMvMzMy7zMzMzMzMzLvMzMzLvMzMu8zMy7u8zMy7zMzMzMzMzLvLu7u7u7u8vMzMzMzMzMzA==",
+        "data": "hwQQABAAAADMzMzMzMzMzLy7u7u7u7vLvMvMzMzMvMu8vMzMzMzLy7zMy8zMvMzLvMy8zMzLzMu8zMzLvMzMy7zMzLzLzMzLvMzMvMvMzMu8zMzLvMzMy7zMvMzMy8zLvMzLzMy8zMu8vMzMzMzLy7zLzMzMzLzLvLu7u7u7u8vMzMzMzMzMzA==",
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true
     },
     "tile2": {
         "data": "hwQQABAAAAAiIiIiIiIiIkJEREREREQkQiIiIiIiIiRCIiIiIiIiJEIiREQiIiIkQkJERCIkJCRCQiREJCQkJEJCREQiQiIkQkJERCRCIiRCQiREIiQkJEIiREQkJCQkQiIiIiIiIiRCIiIiIiIiJEIiIiIiIiIkQkRERERERCQiIiIiIiIiIg==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true
+    },
+    "tile3": {
+        "data": "hwQQABAAAAB3d3d3d3d3d1dVVVVVVVV1V3d3d3d3d3VXd3d3d3d3dVdXVVVVVXd1V1dXV3d3d3VXV3VVd3d3dVdXV1d3d3d1V3d1dXV3d3VXd1VXdXd3dVd3dXV1d3d1V3dVVXV3d3VXd3d3d3d3dVd3d3d3d3d1V1VVVVVVVXV3d3d3d3d3dw==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true
+    },
+    "tile4": {
+        "data": "hwQQABAAAABERERERERERFRVVVVVVVVFVEREREREREVURFRFRERERVRERVRERERFVFRVVUVEREVUVFVVVURFRVRUVVVVVUVFVFRVVVVVRUVUVFVVVURFRVRUVVVFRERFVERFVEREREVURFRFRERERVRERERERERFVFVVVVVVVUVERERERERERA==",
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true
     },
@@ -75,6 +85,7 @@ let thePlayer = sprites.create(img`
 Now we need to get the player Sprite moving.
 Drag out a ``||controller:move sprite with buttons||``
 block and place it at the end of ``||loops:on start||``.
+Change the variable name from "mySprite" to "thePlayer".
 Press the plus button and change the vy argument to 0.
 
 ```blocks
@@ -110,6 +121,7 @@ In MakeCode Arcade, positive y values are in the *down* direction.
 We'll be setting the acceleration y to be positive so that the sprite will fall down.
 
 Drag out a ``||sprites:set sprite x to||`` block and place it at the end of ``||loops:on start||``.
+Change the variable name from "mySprite" to "thePlayer".
 Change the dropdown to ay (acceleration y) and set the value to 500.
 
 
@@ -156,6 +168,7 @@ To make the player jump, we want to set their velocity so that they travel upwar
 That means we want to give them a *negative* velocity y.
 
 Drag out a ``||sprites:set sprite x to||`` block and place it inside of ``||controller:on A button pressed||``.
+Change the variable name from "mySprite" to "thePlayer".
 Change the dropdown to vy (velocity y) and set the value to -200.
 
 ```blocks

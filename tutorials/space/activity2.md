@@ -5,6 +5,12 @@
 Now let's customize your ship! You can fire a projectile when the **A** button
 is pressed, or add effects while your ship is moving.
 
+## Customize sprites
+
+We've started you off with some code, but you can customize the sprites however
+you want: design a new kind of vehicle, or an alien creature floating through
+the depths of space!
+
 ## Add a button event
 
 Find ``||controller:on A button pressed||`` in ``||controller:Controller||`` and drag it into the workspace.
@@ -56,9 +62,10 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 
 Time for some special effects! From ``||sprites:Sprites||``, drag the
 ``||sprites:mySprite start effects||`` block **after**
-``||variables:projectile from mySprite||``. Click on the dropdown and try out
-some different effects! You can also use this block to set an effect on your
-spaceship.
+``||variables:projectile from mySprite||``. Make sure you change the variable
+from ``||variables:mySprite||`` to ``||variables:projectile||``, then click on
+the dropdown and try out some different effects! You can also use this block
+to set an effect on your spaceship.
 
 ```blocks
 let mySprite: Sprite = null

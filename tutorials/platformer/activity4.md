@@ -57,47 +57,11 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile2, function (sprite, location
     game.over(false)
 })
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile4, function (sprite, location) {
-    startNextLevel()
+    game.over(true)
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     thePlayer.vy = -200
 })
-function startNextLevel () {
-    for (let value of sprites.allOfKind(SpriteKind.Enemy)) {
-        value.destroy()
-    }
-    if (currentLevel == 0) {
-        tiles.setTilemap(tilemap`level`)
-    } else if (currentLevel == 1) {
-        tiles.setTilemap(tilemap`level`)
-    } else {
-        game.over(true)
-    }
-    tiles.placeOnRandomTile(thePlayer, myTiles.tile3)
-    for (let value of tiles.getTilesByType(myTiles.tile5)) {
-        newEnemy = sprites.create(img`
-            a a a a a a a a a a a a a a a a
-            a b b b b b b b b b b b b b b a
-            a b a a a a a a a a a a a a b a
-            a b a a b b a a a a b b a a b a
-            a b a a a a b a a b a a a a b a
-            a b a a a a a a a a a a a a b a
-            a b a a a b a a a a b a a a b a
-            a b a a a b a a a a b a a a b a
-            a b a a a a a a a a a a a a b a
-            a b a a a a a a a a a a a a b a
-            a b a a a b b b b b b a a a b a
-            a b a a b a a a a a a b a a b a
-            a b a a a a a a a a a a a a b a
-            a b a a a a a a a a a a a a b a
-            a b b b b b b b b b b b b b b a
-            a a a a a a a a a a a a a a a a
-            `, SpriteKind.Enemy)
-        tiles.placeOnTile(newEnemy, value)
-        newEnemy.follow(thePlayer, 30)
-    }
-    currentLevel += 1
-}
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
     otherSprite.destroy()
     if (sprite.bottom < otherSprite.y) {
@@ -107,7 +71,6 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
     }
 })
 let newEnemy: Sprite = null
-let currentLevel = 0
 let thePlayer: Sprite = null
 scene.setBackgroundColor(11)
 thePlayer = sprites.create(img`
@@ -132,7 +95,30 @@ thePlayer.ay = 500
 controller.moveSprite(thePlayer, 100, 0)
 scene.cameraFollowSprite(thePlayer)
 info.setLife(3)
-startNextLevel()
+tiles.setTilemap(tilemap`level`)
+tiles.placeOnRandomTile(thePlayer, myTiles.tile3)
+for (let value of tiles.getTilesByType(myTiles.tile5)) {
+    newEnemy = sprites.create(img`
+        a a a a a a a a a a a a a a a a
+        a b b b b b b b b b b b b b b a
+        a b a a a a a a a a a a a a b a
+        a b a a b b a a a a b b a a b a
+        a b a a a a b a a b a a a a b a
+        a b a a a a a a a a a a a a b a
+        a b a a a b a a a a b a a a b a
+        a b a a a b a a a a b a a a b a
+        a b a a a a a a a a a a a a b a
+        a b a a a a a a a a a a a a b a
+        a b a a a b b b b b b a a a b a
+        a b a a b a a a a a a b a a b a
+        a b a a a a a a a a a a a a b a
+        a b a a a a a a a a a a a a b a
+        a b b b b b b b b b b b b b b a
+        a a a a a a a a a a a a a a a a
+        `, SpriteKind.Enemy)
+    tiles.placeOnTile(newEnemy, value)
+    newEnemy.follow(thePlayer, 30)
+}
 
 
 ```
@@ -579,7 +565,7 @@ function startNextLevel () {
 Finally, we need to clean up enemies from the last level before loading the new one.
 Drag out a ``||loops: for element value of||`` block and place it at the *top* of the function (above the ``||logic: if then||``).
 
-For the list, drag out an ``||sprites:array of sprites of kind||`` from the "Arrays" category and change the kind to "Enemy".
+For the list, drag out an ``||sprites:array of sprites of kind||`` from the "Arrays" category and change the kind to "Enemy". You'll need to remove the array block from the ``||variables:set variable||`` block (see the hint for what the code should look like).
 
 ```blocks
 let newEnemy: Sprite = null
