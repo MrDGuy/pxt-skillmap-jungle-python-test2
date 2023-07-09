@@ -7,19 +7,13 @@
     },
     "files": [
         "README.md",
-        "skillmap.md",
+        "docs/skillmap/dino.md",
         "_locales/fr/skillmap.md",
-        "tutorials/interface/activity1.md",
-        "tutorials/platformer/activity1.md",
-        "tutorials/platformer/activity2.md",
-        "tutorials/platformer/activity3.md",
-        "tutorials/platformer/activity4.md",
-        "tutorials/platformer/activity5.md",
-        "tutorials/space/activity1.md",
-        "tutorials/space/activity2.md",
-        "tutorials/space/activity3.md",
-        "tutorials/space/activity4.md",
-        "tutorials/space/activity5.md"
+        "docs/skillmap/dino/dino1.md",
+        "docs/skillmap/dino/dino2.md",
+        "docs/skillmap/dino/dino3.md",
+        "docs/skillmap/dino/dino4.md",
+        "docs/skillmap/educator-info/dino-map-info.md"
     ],
     "testFiles": [
     ],
