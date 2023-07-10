@@ -1,5 +1,5 @@
 {
-    "name": "pxt-skillmap-dino-python-test1",
+    "name": "pxt-skillmap-jungle-python-test2",
     "version": "0.0.1",
     "description": "",
     "dependencies": {
@@ -7,13 +7,17 @@
     },
     "files": [
         "README.md",
-        "docs/skillmap/dino.md",
+        "docs/skillmap/jungle.md",
         "_locales/fr/skillmap.md",
-        "docs/skillmap/dino/dino1.md",
-        "docs/skillmap/dino/dino2.md",
-        "docs/skillmap/dino/dino3.md",
-        "docs/skillmap/dino/dino4.md",
-        "docs/skillmap/educator-info/dino-map-info.md"
+        "docs/skillmap/jungle/jungle1.md",
+        "docs/skillmap/jungle/jungle2.md",
+        "docs/skillmap/jungle/jungle3.md",
+        "docs/skillmap/jungle/jungle4.md",
+        "docs/skillmap/jungle/jungle5.md",
+        "docs/skillmap/jungle/jungle6.md",
+        "docs/skillmap/jungle/jungle7.md",
+        "docs/skillmap/jungle/jungle8.md",
+        "docs/skillmap/educator-info/jungle-map-info.md"
     ],
     "testFiles": [
     ],
