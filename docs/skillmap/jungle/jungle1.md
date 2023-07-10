@@ -46,7 +46,7 @@ _💡  Having trouble finding the block you need? Look to the left of the instru
 ![Toggle to My Assets](/static/skillmap/assets/my-assets-three.png "toggle to the My Assets Window")
 
 
-```blocks
+```spy
 scene.setBackgroundImage(assets.image`background`)
 tiles.setTilemap(tilemap`level1`)
 // @highlight
@@ -70,7 +70,7 @@ _💡  Remember, the icon to the left of the instructions shows the same icon as
 argument to **0** so that the player won't hover up or down when you use the joypad.
 
 
-```blocks
+```spy
 scene.setBackgroundImage(assets.image`background`)
 tiles.setTilemap(tilemap`level1`)
 let mySprite = sprites.create(assets.image`stand`, SpriteKind.Player)
@@ -104,7 +104,7 @@ to **the end** of the <br/>
 
 - :mouse pointer: To pull the sprite toward the ground, replace **0** with **500**.
 
-```blocks
+```spy
 scene.setBackgroundImage(assets.image`background`)
 tiles.setTilemap(tilemap`level1`)
 let mySprite = sprites.create(assets.image`stand`, SpriteKind.Player)
@@ -124,7 +124,7 @@ mySprite.ay = 500
 to **the end** of the <br/>
 ``||loops(noclick):on start||`` container.
 
-```blocks
+```spy
 scene.setBackgroundImage(assets.image`background`)
 tiles.setTilemap(tilemap`level1`)
 let mySprite = sprites.create(assets.image`stand`, SpriteKind.Player)
@@ -159,7 +159,7 @@ container into an empty area of the workspace.
 container, add <br/>
 ``||sprites(simplified):make [mySprite] gravity jump||`` from the ``||simplified:Simplified||`` category.
 
-```blocks
+```spy
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     let mySprite: Sprite = null
     //@highlight
