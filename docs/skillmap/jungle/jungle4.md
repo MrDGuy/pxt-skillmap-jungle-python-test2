@@ -38,7 +38,7 @@ container into an empty area of the workspace.
 *💡 Move to the next step to learn how to spawn your explosive.*
 
 
-```blocks
+```spy
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
 
 })
@@ -62,7 +62,7 @@ _💡 Don't set the image yet. We'll handle that in another step._
 
 
 
-```blocks
+```spy
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     //@highlight
     projectile = sprites.createProjectileFromSprite(assets.image`blank`, mySprite, 0, 0)
@@ -90,7 +90,7 @@ and change it to <br/>
 ``||sprites:ghost through walls||``.
 
 
-```blocks
+```spy
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
 let projectile = sprites.createProjectileFromSprite(assets.image`blank`, mySprite, 0, 0)
     //@highlight
@@ -115,7 +115,7 @@ block to **the end** of <br/>
 - :mouse pointer: Click ``||variables(noclick):mySprite||`` and change it to ``||variables(noclick):projectile||``.
 
 
-```blocks
+```spy
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     let projectile = sprites.createProjectileFromSprite(assets.image`blank`, mySprite, 0, 0)
     projectile.setFlag(SpriteFlag.GhostThroughWalls, true)
@@ -141,7 +141,7 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
 _💡 Don't worry if the animation looks empty in your code. The beginning frames are blank to give your character time to get out of the way!_
 
 
-```blocks
+```spy
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     let projectile = sprites.createProjectileFromSprite(assets.image`blank`, mySprite, 0, 0)
     projectile.setFlag(SpriteFlag.GhostThroughWalls, true)
@@ -183,7 +183,7 @@ container into an empty area of the workspace.
 - :paint brush: Click the empty tile box and choose the leafy **skyblock** platform tile.
 
 
-```blocks
+```spy
 scene.onOverlapTile(SpriteKind.Projectile, assets.tile`skyblock`, function (sprite, location) {
 
 })
@@ -205,7 +205,7 @@ title and drop it in to replace <br/>
 ![Editing our platformer](/static/skillmap/jungle/projectile-wall-off.gif "Time to live dangerously!")
 
 
-```blocks
+```spy
 scene.onOverlapTile(SpriteKind.Projectile, assets.tile`skyblock`, function (sprite, location) {
     //@highlight
     tiles.setWallAt(location, false)
@@ -235,7 +235,7 @@ title and drop it in to replace <br/>
 ``||scene:tilemap col [0] row [0]||``.
 
 
-```blocks
+```spy
 scene.onOverlapTile(SpriteKind.Projectile, assets.tile`skyblock`, function (sprite, location) {
     tiles.setWallAt(location, false)
     //@highlight
