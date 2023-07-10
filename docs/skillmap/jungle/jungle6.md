@@ -34,7 +34,7 @@ into an empty area of the workspace.
 - :mouse pointer: Click ``||controller:A||`` and choose ``||controller:right||`` from the dropdown.
 
 
-```blocks
+```spy
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
 
 })
@@ -56,7 +56,7 @@ container.
 
 
 
-```blocks
+```spy
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     //@highlight
     animation.runImageAnimation(
@@ -79,7 +79,7 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
 Look at what you did for the right animation and see if you can figure out what changes to make when for when the left arrow is pressed.
 
 
-```blocks
+```spy
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     animation.runImageAnimation(
     mySprite,
@@ -121,7 +121,7 @@ container.
 
 
 
-```blocks
+```spy
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     simplified.gravity_jump(mySprite)
     //@highlight
