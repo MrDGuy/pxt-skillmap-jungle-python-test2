@@ -40,7 +40,7 @@ container.
 - :mouse pointer: Toggle `<OFF>` to `<ON>`.
 
 
-```blocks
+```spy
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     tiles.setWallAt(tiles.getTileLocation(0, 0), true)
 })
@@ -62,7 +62,7 @@ in to replace <br/>
 ``||variables(noclick):location||``.
 
 
-```blocks
+```spy
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         tiles.setWallAt(tiles.locationInDirection(tiles.locationOfSprite(mySprite), CollisionDirection.Bottom), true)
 
@@ -97,7 +97,7 @@ container.
 - :paint brush: Click the empty square and choose the crate called **bounce**.
 
 
-```blocks
+```spy
 
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         tiles.setWallAt(tiles.locationInDirection(tiles.locationOfSprite(mySprite), CollisionDirection.Bottom), true)
@@ -122,7 +122,7 @@ in to replace <br/>
 in to replace  ``||variables(noclick):location||``.
 
 
-```blocks
+```spy
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         tiles.setWallAt(tiles.locationInDirection(tiles.locationOfSprite(mySprite), CollisionDirection.Bottom), true)
     //@highlight
