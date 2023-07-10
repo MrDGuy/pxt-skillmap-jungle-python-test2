@@ -39,7 +39,7 @@ container into an empty area of the workspace.
 block into the new container.
 
 
-```blocks
+```spy
 scene.onOverlapTile(SpriteKind.Player, assets.tile`poison pit`, function (sprite, location) {
     game.over(false)
 })
@@ -74,7 +74,7 @@ block into the new container and toggle
 the **`<LOSE>`** switch to **`<WIN>`**!
 
 
-```blocks
+```spy
 scene.onOverlapTile(SpriteKind.Player, assets.tile`chest1`, function (sprite, location) {
     //@highlight
     game.over(true)
@@ -107,7 +107,7 @@ container into the workspace.
 - :id card: Snap a ``||info:change score by [1]||`` block into the new container.
 
 
-```blocks
+```spy
 scene.onOverlapTile(SpriteKind.Player, assets.tile`orange bauble`, function (sprite, location) {
     info.changeScoreBy(1)
 })
@@ -140,7 +140,7 @@ value from the top of the **Player overlaps orange bauble** container.
 
 ![Share your location](/static/skillmap/jungle/jungle-location.gif "Grab the variable from the overlap container")
 
-```blocks
+```spy
 scene.onOverlapTile(SpriteKind.Player, assets.tile`orange bauble`, function (sprite, location) {
     //@highlight
     tiles.setTileAt(location, assets.tile`transparency16`)
