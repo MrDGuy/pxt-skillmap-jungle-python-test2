@@ -32,7 +32,7 @@ block inside of the **Player overlaps chest1** container.
 
 - :mouse pointer: Click the image of **chest1** and change it to **chest2**.
 
-```blocks
+```spy
 scene.onOverlapTile(SpriteKind.Player, assets.tile`chest2`, function (sprite, location) {
     game.over(true)
 })
@@ -53,7 +53,7 @@ into an empty area of the workspace.
 
 
 
-```blocks
+```spy
 scene.onOverlapTile(SpriteKind.Player, assets.tile`chest1`, function (sprite, location) {
 
 })
@@ -71,7 +71,7 @@ into the empty **Player overlaps chest1** container.
 - :paint brush: Click the grey square and toggle to **My Assets** to choose **background2**.
 
 
-```blocks
+```spy
 scene.onOverlapTile(SpriteKind.Player, assets.tile`chest1`, function (sprite, location) {
     scene.setBackgroundImage(assets.image`background2`)
 })
@@ -88,7 +88,7 @@ to **the end** of the **Player overlaps chest1** container.
 - :paint brush: Click the grey square and toggle to **My Assets** to choose **level2**.
 
 
-```blocks
+```spy
 scene.onOverlapTile(SpriteKind.Player, assets.tile`chest1`, function (sprite, location) {
     scene.setBackgroundImage(assets.image`background2`)
     tiles.setTilemap(tilemap`level2`)
@@ -113,7 +113,7 @@ into **the end** of the **Player overlaps chest1** container.
 
 - :mouse pointer: Change the text to say **Level 2!** and click the white plus **(+)** to the right of the block so that the text disappears after 500 ms.
 
-```blocks
+```spy
 let mySprite: Sprite = null
 scene.onOverlapTile(SpriteKind.Player, assets.tile`chest1`, function (sprite, location) {
     scene.setBackgroundImage(assets.image`background2`)
