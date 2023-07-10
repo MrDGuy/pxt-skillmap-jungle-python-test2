@@ -34,7 +34,7 @@ container into an empty area of the workspace.
 - :mouse pointer: Click the second kind ``||sprites:Player||`` and change it to ``||sprites:Projectile||``.
 
 
-```blocks
+```spy
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, otherSprite) {
 
 })
@@ -52,7 +52,7 @@ into the empty **on Projectile overlaps Player** container.
 
 
 
-```blocks
+```spy
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, otherSprite) {
     //@highlight
     otherSprite.destroy()
@@ -77,7 +77,7 @@ Don't forget to remove HP from the monkey!
 to **the end** of the **on Projectile overlaps Player** container.
 
 
-```blocks
+```spy
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, otherSprite) {
     otherSprite.destroy()
     //@highlight
@@ -114,7 +114,7 @@ This game could have even more options if we remove **bounce** crates and **pois
 - :paint brush: In the new container, change the **skyblock** tile to the **bounce** crate.
 
 
-```blocks
+```spy
 scene.onOverlapTile(SpriteKind.Projectile, assets.tile`skyblock`, function (sprite, location) {
     tiles.setWallAt(location, false)
     tiles.setTileAt(location, assets.tile`transparency16`)
@@ -130,7 +130,7 @@ scene.onOverlapTile(SpriteKind.Projectile, assets.tile`bounce`, function (sprite
 - :mouse pointer: Repeat the process once again, but this time choose the **poison pit** tile.
 
 
-```blocks
+```spy
 scene.onOverlapTile(SpriteKind.Projectile, assets.tile`skyblock`, function (sprite, location) {
     tiles.setWallAt(location, false)
     tiles.setTileAt(location, assets.tile`transparency16`)
